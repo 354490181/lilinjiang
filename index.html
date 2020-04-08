@@ -95,7 +95,7 @@
 <p><img src="/lilinjiang/2020/04/08/hexo%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/1.png" alt></p>
 <p>2.安装图片显示插件，划个重点，要在指定的hexo文件夹下安装，安装命令如下（任意一个均可&lt;其实都是安装hexo-asset-image插件&gt;）：<br>npm install <a href="https://github.com/CodeFalling/hexo-asset-image" target="_blank" rel="noopener">https://github.com/CodeFalling/hexo-asset-image</a> –save <code>我使用的这个安装成功的</code><br>npm install hexo-asset-image –save</p>
 <p>3.创建新的博文 hexo new “xxxx”,发现/source/_post目录下有一个与xxxx同名的文件夹，这个是步骤一的作用；</p>
-<p>4.将图片放入文件夹中，在博文中使用markdown语法写入图片<img src="/lilinjiang/2020/04/08/hexo%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84" alt="随便写">；</p>
+<p>4.将图片放入文件夹中，在博文中使用markdown语法写入图片<code>![随便写](图片路径)</code>；</p>
 <p>5.运行如下命令hexo clean -&gt; hexo deploy -g ，刷新博客文章可以看到对应的图片展示出来了。</p>
 <p>   图片是否能够展示其实在hexo g 这个命令是就可以看出，如果public/index.html文件中存在</p>
 <p><img src="/lilinjiang/2020/04/08/hexo%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/2020/04/08/xxxx/图片名.png" alt></p>证明能够显示成功。
