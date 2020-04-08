@@ -7,15 +7,16 @@
   
   <title>JVM之运行时数据区（一） | 李林江的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="整理技术学习笔记的地方">
+  <meta name="description" content="JVM是什么JVM全称Java Virtual Machine（java虚拟机），对于java程序员来说，在虚拟机自动内存管理机制的帮助下，不在需要为每一个new出来的对象进行delete&#x2F;free操作，不容易出现内存泄漏和内存溢出问题，看起来由虚拟机管理内存一起都很美好，不过，也正是因为Java程序员把控制内存的权力交给了Java虚拟机，一旦出现内存泄漏和溢出方面的问题，如果不了解虚拟机是怎样使">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM之运行时数据区（一）">
 <meta property="og:url" content="http://yoursite.com/2020/04/08/JVM%E4%B9%8B%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
 <meta property="og:site_name" content="李林江的博客">
-<meta property="og:description" content="整理技术学习笔记的地方">
+<meta property="og:description" content="JVM是什么JVM全称Java Virtual Machine（java虚拟机），对于java程序员来说，在虚拟机自动内存管理机制的帮助下，不在需要为每一个new出来的对象进行delete&#x2F;free操作，不容易出现内存泄漏和内存溢出问题，看起来由虚拟机管理内存一起都很美好，不过，也正是因为Java程序员把控制内存的权力交给了Java虚拟机，一旦出现内存泄漏和溢出方面的问题，如果不了解虚拟机是怎样使">
 <meta property="article:published_time" content="2020-04-08T10:26:52.000Z">
-<meta property="article:modified_time" content="2020-04-08T10:26:52.717Z">
+<meta property="article:modified_time" content="2020-04-08T10:56:50.488Z">
 <meta property="article:author" content="李林江">
+<meta property="article:tag" content="JVM">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/lilinjiang/atom.xml" title="李林江的博客" type="application/atom+xml">
@@ -91,13 +92,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="JVM是什么"><a href="#JVM是什么" class="headerlink" title="JVM是什么"></a>JVM是什么</h2><p>JVM全称Java Virtual Machine（java虚拟机），对于java程序员来说，在虚拟机自动内存管理机制的帮助下，不在需要为每一个new出来的对象进行<br>delete/free操作，不容易出现内存泄漏和内存溢出问题，看起来由虚拟机管理内存一起都很美好，不过，也正是因为Java程序员把控制内存的权力<br>交给了Java虚拟机，一旦出现内存泄漏和溢出方面的问题，如果不了解虚拟机是怎样使用内存的，那排查错误、修正问题将会成为一项异常艰难的工作。</p>
+<h2 id="JVM运行时数据区"><a href="#JVM运行时数据区" class="headerlink" title="JVM运行时数据区"></a>JVM运行时数据区</h2><p>Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为若干个不同的数据区域。这些区域有各自的用途，以及创建和销毁的时间，有的区域随着<br>虚拟机进程的启动而一直存在，有些区域则是依赖用户线程的启动和结束而建立和销毁。根据《Java虚拟机规范》的规定，Java虚拟机所管理的内存将会<br>包括以下几个运行时数据区域，如图2-1所示。</p>
+
       
     </div>
     <footer class="article-footer">
       <a data-url="http://yoursite.com/2020/04/08/JVM%E4%B9%8B%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%EF%BC%88%E4%B8%80%EF%BC%89/" data-id="ck8r6ui5d0000mct1gwrebyn3" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/lilinjiang/tags/JVM/" rel="tag">JVM</a></li></ul>
+
     </footer>
   </div>
   
@@ -135,7 +140,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/lilinjiang/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/lilinjiang/tags/JVM/" rel="tag">JVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/lilinjiang/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
     </div>
   </div>
 
@@ -145,7 +150,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/lilinjiang/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a>
+      <a href="/lilinjiang/tags/JVM/" style="font-size: 10px;">JVM</a> <a href="/lilinjiang/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a>
     </div>
   </div>
 
